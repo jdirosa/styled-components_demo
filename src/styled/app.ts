@@ -6,13 +6,13 @@ export const AppWraper = styled.div`
 `;
 
 interface IRGBProps {
-  rgb: number[];
+  thecolors: number[];
 }
 
 /** Styled component for the application Title */
 export const Title = styled.div<IRGBProps>`
   font-size: 72px;
-  ${({ rgb }) => {
+  ${({ thecolors: rgb }) => {
     const invertedColor = invertRGB(rgb);
     return css`
       color: rgb(${invertedColor[0]}, ${invertedColor[1]}, ${invertedColor[2]});
@@ -30,7 +30,7 @@ export const AppBody = styled.div<IRGBProps>`
   font-size: calc(10px + 2vmin);
   color: white !important;
 
-  ${({ rgb }) =>
+  ${({ thecolors: rgb }) =>
     css`
       background-color: rgb(${rgb[0]}, ${rgb[1]}, ${rgb[2]});
     `}
@@ -45,7 +45,7 @@ export const Link = styled.a<IRGBProps>`
     font-size: 30px;
   }
   ${(props) => {
-    const color = invertRGB(props.rgb);
+    const color = invertRGB(props.thecolors);
     return css`
       color: rgb(${color[0]}, ${color[1]}, ${color[2]});
     `;
@@ -93,7 +93,7 @@ export const Button = styled.a<IRGBProps>`
   font-size: 40px;
   cursor: pointer;
   transition: 0.25s;
-  ${({ rgb }) => {
+  ${({ thecolors: rgb }) => {
     const invertedColor = invertRGB(rgb);
     return css`
       border: 3px solid

@@ -35,14 +35,14 @@ const App: React.FC = () => {
   const handleRgbChanged = (val: number[]) => setRgb(val);
   return (
     <AppWraper>
-      <AppBody rgb={rgb}>
-        <Title rgb={rgb}>Styled Components!</Title>
+      <AppBody thecolors={rgb}>
+        <Title thecolors={rgb}>Styled Components!</Title>
         <AppLogo speed={spinSpeed} src={logo} onClick={adjustSpeed} />
         <ColorSliders rgb={rgb} onChange={handleRgbChanged} />
-        <Button rgb={rgb} onClick={randomizeColors}>
+        <Button thecolors={rgb} onClick={randomizeColors}>
           Get Random!
         </Button>
-        <Link rgb={rgb} href="https://styled-components.com">
+        <Link thecolors={rgb} href="https://styled-components.com">
           Learn more...
         </Link>
       </AppBody>

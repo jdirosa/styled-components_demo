@@ -14,9 +14,11 @@ For a full list of benefits, check out [here](https://styled-components.com/docs
 1. Unused styles can be more confidently removed
 1. Less inline styling means cleaner code reading
 
-## Available Scripts
+## Get started
 
-In the project directory, you can run:
+1. Clone the repo
+1. `npm i`
+1. `npm start`
 
 ### `npm start`
 
